@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // calculate for calculator
     private String calculate(String op, String num1, String num2) {
         if (op.equals("/")) {
-            if (num2.equals("0")) {
+            if (num2.equals("0") || num2.equals("0.")) {
                 num1 = error;
             } else {
                 num1 = Double.toString(Double.parseDouble(num1) / Double.parseDouble(num2));
